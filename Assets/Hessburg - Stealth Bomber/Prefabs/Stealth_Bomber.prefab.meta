@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a915a3285fc7e49638568c2e6c584872
+timeCreated: 1456258397
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56765
+  packageName: Stealth Bomber
+  packageVersion: 1.0
+  assetPath: Assets/Hessburg - Stealth Bomber/Prefabs/Stealth_Bomber.prefab
+  uploadId: 104522

@@ -20,20 +20,9 @@ public class CubeSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         var spawnPosition = GenerateEnemyPosition();
-        // Calculate the direction from the spawn position to the origin (0, 0)
         Vector3 directionToOrigin = (Vector3.zero - spawnPosition).normalized;
-        // Create a rotation that looks in the direction of the origin
         Quaternion rotationToOrigin = Quaternion.LookRotation(directionToOrigin);
-        // Instantiate the enemy at the spawn position and facing the origin
         GameObject enemy = Instantiate(enemyPrefab, spawnPosition, rotationToOrigin);
-        // Disable any Audio Listener if present
-        AudioListener audioListener = enemy.GetComponent<AudioListener>();
-        if (audioListener != null)
-        {
-            audioListener.enabled = false; // Disable the Audio Listener if found
-            Debug.Log("Audio Listener detected and disabled on bombPrefab.");
-        }
-        // Add enemy movement logic
         enemy.AddComponent<EnemyMover>();
     }
 
