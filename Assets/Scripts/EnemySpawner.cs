@@ -4,7 +4,8 @@ public class CubeSpawner : MonoBehaviour
 {
     public GameObject enemyPrefab; // Reference to the cube prefab
     public float spawnInterval = 5f; // Interval between spawns
-    public float enemyInitialDistance = 100f; // Enemy initial distance
+    public float enemyInitialMinDistance = 150f; // Enemy initial distance
+    public float enemyInitialMaxDistance = 250f; // Enemy initial distance
     private float timer = 0f; // Timer to keep track of spawning
 
     void Update()
@@ -30,8 +31,9 @@ public class CubeSpawner : MonoBehaviour
     private Vector3 GenerateEnemyPosition()
     {
         float angle = Random.Range(0f, Mathf.PI * 2);
-        float x = Mathf.Cos(angle) * enemyInitialDistance;
-        float z = Mathf.Sin(angle) * enemyInitialDistance;
+        float distance = Random.Range(enemyInitialMinDistance, enemyInitialMaxDistance);
+        float x = Mathf.Cos(angle) * distance;
+        float z = Mathf.Sin(angle) * distance;
         return new Vector3(x, 0f, z);
     }
 }

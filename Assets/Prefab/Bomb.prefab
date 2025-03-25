@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f5190369f907444b31f4a1f14377ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRadius: 15
+  explosionRadius: 10
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
