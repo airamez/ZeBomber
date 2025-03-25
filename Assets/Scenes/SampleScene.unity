@@ -184,7 +184,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_MaterialTemplate: {fileID: 2100000, guid: 6537ee28b4e7f13439aead4b03b8721e, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -424,7 +424,7 @@ Transform:
   m_GameObject: {fileID: 189620084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0010004044, y: 0.51499987, z: -2.455}
+  m_LocalPosition: {x: -0.001, y: 0.553, z: -2.456}
   m_LocalScale: {x: 0.5, y: 0.099999994, z: 1.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -532,8 +532,8 @@ Transform:
   m_GameObject: {fileID: 220367480}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.001, y: -0.023, z: -0.103}
-  m_LocalScale: {x: 0.5, y: 0.1, z: 3}
+  m_LocalPosition: {x: 0.158, y: -0.023, z: -0.103}
+  m_LocalScale: {x: 0.5, y: 0.1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1542238099}
@@ -582,7 +582,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 96308739642b77f478e1daf7075701ec, type: 2}
+  - {fileID: 2100000, guid: eb32bf17864dc45459fdb3f86424351f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1162,13 +1162,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940201358}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.29883623, y: 0.64085644, z: 0.29883623, w: 0.64085644}
   m_LocalPosition: {x: 0.028, y: 0.365, z: -2.225}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.2}
+  m_LocalScale: {x: 1, y: 0.5, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1542238099}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 50}
 --- !u!65 &940201360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1495,7 +1495,7 @@ Transform:
   m_GameObject: {fileID: 1983815548}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.048, y: 0.058, z: 1.32}
+  m_LocalPosition: {x: 0.034, y: 0.058, z: 1.32}
   m_LocalScale: {x: 1.1, y: 0.089999996, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

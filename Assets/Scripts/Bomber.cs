@@ -14,29 +14,6 @@ public class AirplaneController: MonoBehaviour
         
     }
 
-    // void Update()
-    // {
-    //     // Move forward
-    //     transform.position += transform.forward * FlySpeed * Time.deltaTime;
-
-    //     // Smooth the horizontal input
-    //     float horizontalInput = Input.GetAxis("Horizontal");
-    //     smoothedHorizontalInput = Mathf.Lerp(smoothedHorizontalInput, horizontalInput, Time.deltaTime * 5f);
-
-    //     float verticalInput = Input.GetAxis("Vertical");
-
-    //     // Yaw, pitch, roll
-    //     Yaw += smoothedHorizontalInput * YawAmount * Time.deltaTime;
-    //     float pitch = Mathf.Lerp(0, 20, Mathf.Abs(verticalInput)) * Mathf.Sign(verticalInput);
-    //     float roll = Mathf.Lerp(0, 30, Mathf.Abs(smoothedHorizontalInput)) * -Mathf.Sign(smoothedHorizontalInput);
-
-    //     // Apply smoothed rotation
-    //     transform.localRotation = Quaternion.Lerp(
-    //         transform.localRotation,
-    //         Quaternion.Euler(Vector3.up * Yaw + Vector3.right * pitch + Vector3.forward * roll),
-    //         Time.deltaTime * 5f // Adjust smoothing speed
-    //     );
-    // }
     void Update()
     {
         // Move forward
