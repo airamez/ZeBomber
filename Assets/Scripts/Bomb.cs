@@ -25,6 +25,7 @@ public class Bomb : MonoBehaviour
         if (collision.gameObject.name == groundName || 
             collision.gameObject.name.StartsWith(enemyName))
         {
+            gameObject.SetActive(false);
             Explode();
         }
     }
@@ -34,7 +35,7 @@ public class Bomb : MonoBehaviour
         bombExplosion.Play();
         Collider[] enemies = Physics.OverlapSphere(transform.position, explosionRadius, enemyLayer);
         if (enemies.Length > 0) {
-            gameObject.SetActive(false);
+            Destroy(gameObject);
             foreach (Collider enemy in enemies)
             {
                 if (enemy.name.StartsWith("Enemy")) {
@@ -47,6 +48,5 @@ public class Bomb : MonoBehaviour
                 }
             }
         }
-        Destroy(gameObject);
     }
 }
