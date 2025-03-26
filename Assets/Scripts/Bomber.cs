@@ -4,7 +4,7 @@ using UnityEngine;
 public class AirplaneController: MonoBehaviour
 {
     public float FlySpeed = 5;
-    public float MinAltitude = 5f;
+    public float MinAltitude = 20f;
     public float YawAmount = 60;
     private float smoothedHorizontalInput = 0f;
     private float Yaw;

@@ -1236,7 +1236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlySpeed: 25
-  MinAltitude: 5
+  MinAltitude: 25
   YawAmount: 80
 --- !u!1 &1647314605
 GameObject:
