@@ -35,10 +35,11 @@ public class Bomb : MonoBehaviour
         Collider[] enemies = Physics.OverlapSphere(transform.position, explosionRadius, enemyLayer);
         foreach (Collider enemy in enemies)
         {
-            enemyExplosion.Play();
-            Instantiate(explosionPrefab, enemy.transform.position, Quaternion.identity);
-            Destroy(enemy.gameObject);
             if (enemy.name.StartsWith("Enemy")) {
+                enemyExplosion.Play();
+                var explosionInstance = Instantiate(explosionPrefab, enemy.transform.position, Quaternion.identity);
+                Destroy(explosionInstance, 15);
+                Destroy(enemy.gameObject);
                 enemiesDestroyed++;
                 scoreText.text = $"Enemies Destroyed: {enemiesDestroyed}";
             }
