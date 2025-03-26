@@ -162,6 +162,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   enemyName: Enemy
+  groundName: Ground
+  explosionPrefab: {fileID: 579853381796857659, guid: cf39a9bda5eabe546a578ff885968897, type: 3}
 --- !u!82 &8866822984403636032
 AudioSource:
   m_ObjectHideFlags: 0

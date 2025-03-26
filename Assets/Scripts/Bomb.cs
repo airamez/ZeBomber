@@ -3,9 +3,11 @@ using TMPro;
 
 public class Bomb : MonoBehaviour
 {
-    public float explosionRadius = 5f; // Radius of the explosion
-    public LayerMask enemyLayer; // Specify the layer for enemies
+    public float explosionRadius = 5f;
+    public LayerMask enemyLayer;
     public string enemyName = "Enemy";
+    public string groundName = "Ground";
+    public GameObject explosionPrefab;
     static int enemiesDestroyed = 0;
     private TextMeshProUGUI scoreText;    
     private AudioSource enemyExplosion; 
@@ -15,12 +17,13 @@ public class Bomb : MonoBehaviour
         bombExplosion = GameObject.Find("BombExplosion").GetComponent<AudioSource>();
         enemyExplosion = GameObject.Find("EnemyExplosion").GetComponent<AudioSource>();
         GameObject scoreObject = GameObject.Find("Score");
-        scoreText = scoreObject.GetComponent<TextMeshProUGUI>();        
+        scoreText = scoreObject.GetComponent<TextMeshProUGUI>();
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Ground" || collision.gameObject.name.StartsWith(enemyName))
+        if (collision.gameObject.name == groundName || 
+            collision.gameObject.name.StartsWith(enemyName))
         {
             Explode();
         }
@@ -33,9 +36,9 @@ public class Bomb : MonoBehaviour
         foreach (Collider enemy in enemies)
         {
             enemyExplosion.Play();
+            Instantiate(explosionPrefab, enemy.transform.position, Quaternion.identity);
             Destroy(enemy.gameObject);
-            Debug.Log($"Emeny name: " + enemy.name);
-            if (enemy.name.StartsWith("body")) {
+            if (enemy.name.StartsWith("Enemy")) {
                 enemiesDestroyed++;
                 scoreText.text = $"Enemies Destroyed: {enemiesDestroyed}";
             }

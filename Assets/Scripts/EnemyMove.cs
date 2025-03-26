@@ -6,11 +6,11 @@ public class EnemyMover : MonoBehaviour
 
     void Update()
     {
-        // Move cube towards (0, 0, 0)
+        // Move towards base (0, 0, 0)
         transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, moveSpeed * Time.deltaTime);
 
-        // Optional: Destroy cube when it reaches (0, 0, 0)
-        if (Vector3.Distance(transform.position, Vector3.zero) < 15f)
+        // Too close to base
+        if (Vector3.Distance(transform.position, Vector3.zero) < 10f)
         {
             Destroy(gameObject);
         }

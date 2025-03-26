@@ -5,15 +5,22 @@ public class CubeSpawner : MonoBehaviour
     public GameObject enemyPrefab; // Reference to the cube prefab
     public float spawnInterval = 5f; // Interval between spawns
     public float enemyInitialDistance = 250f; // Enemy initial distance
-    private float timer = 0f; // Timer to keep track of spawning
-
+    public const float intervalReductionTime = 300f; // 5 minutes in seconds
+    private float spawnTimer = 0f; // Timer to keep track of spawning
+    private float intervalTimer = 0f; // Timer to decrease spawnInterval
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= spawnInterval)
+        spawnTimer += Time.deltaTime;
+        intervalTimer += Time.deltaTime;
+        if (spawnTimer >= spawnInterval)
         {
             SpawnEnemy();
-            timer = 0f; // Reset timer
+            spawnTimer = 0f;
+        }
+        if (intervalTimer >= intervalReductionTime && spawnInterval > 1f)
+        {
+            spawnInterval -= 1f; // Reduce spawnInterval
+            intervalTimer = 0f; // Reset interval timer
         }
     }
 
@@ -25,7 +32,6 @@ public class CubeSpawner : MonoBehaviour
         GameObject enemy = Instantiate(enemyPrefab, spawnPosition, rotationToOrigin);
         enemy.AddComponent<EnemyMover>();
     }
-
 
     private Vector3 GenerateEnemyPosition()
     {

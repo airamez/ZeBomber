@@ -4,7 +4,7 @@ public class BombDropper : MonoBehaviour
 {
     public GameObject bombPrefab; // Bomb prefab
     public Transform bombSpawnPoint; // Spawn point for the bomb
-    public float bombDelay = 2f; // Delay between bomb drops, in seconds
+    public float bombDelay = 1f; // Delay between bomb drops, in seconds
 
     private Vector3 previousPosition; // To track the bomber's previous position
     private Vector3 bomberVelocity; // To calculate bomber velocity
